@@ -1,6 +1,6 @@
 {
   "name": "react-multi-toggle",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "description": "Multi use toggle component for react",
   "main": "index.js",
   "scripts": {
@@ -13,6 +13,11 @@
     "component"
   ],
   "author": "Daniel Arias <danielarias_123@msn.com>",
+  "homepage": "https://github.com/danielarias123/react-multi-toggle",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:danielarias123/react-multi-toggle.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "babel": "^6.5.2",
