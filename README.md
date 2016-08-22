@@ -30,7 +30,7 @@ const groupOptions = [
   },
 ];
 
-Class Example extends Component {
+class Example extends Component {
   constructor(props) {
     super(props);
 
