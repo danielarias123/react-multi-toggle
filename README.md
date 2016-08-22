@@ -2,6 +2,8 @@
 
 React-Multi-Toggle is a stylish toggle component that extends the functionality of a checkbox or a radio button
 
+![alt text](https://github.com/danielarias123/react-multi-toggle/example/images/react-multi-toggle-example.gif "Toggle Gif")
+
 Installation
 ------------
 
@@ -48,7 +50,7 @@ class Example extends Component {
       <MultiToggle
         options={groupOptions}
         selectedOption={groupSize}
-        onSelectOption={onGroupSizeSelect}
+        onSelectOption={this.onGroupSizeSelect}
         label="Select Group Size"
       />
     );
