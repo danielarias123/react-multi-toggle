@@ -1,11 +1,11 @@
 {
   "name": "react-multi-toggle",
-  "version": "1.0.3",
+  "version": "1.0.12",
   "description": "Multi use toggle component for react",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "dev": "webpack --watch"
+    "build": "babel index.es6.js -o index.js",
+    "prepublish": "npm run build"
   },
   "keywords": [
     "react",
@@ -16,9 +16,11 @@
   "license": "MIT",
   "devDependencies": {
     "babel": "^6.5.2",
+    "babel-cli": "^6.11.4",
     "babel-core": "^6.13.2",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.13.2",
+    "babel-preset-react": "^6.11.1",
     "css-loader": "^0.23.1",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
