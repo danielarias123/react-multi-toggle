@@ -2,7 +2,7 @@
 
 React-Multi-Toggle is a stylish toggle component that extends the functionality of a checkbox or a radio button
 
-![alt text](https://github.com/danielarias123/react-multi-toggle/example/images/react-multi-toggle-example.gif "Toggle Gif")
+![alt text](https://github.com/danielarias123/react-multi-toggle/blob/master/example/images/react-multi-toggle-example.gif "Toggle Gif")
 
 Installation
 ------------
