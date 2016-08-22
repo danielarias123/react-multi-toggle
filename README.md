@@ -39,17 +39,19 @@ class Example extends Component {
     };
   }
 
-  onFamilySizeSelect = value => this.setState({ groupSize: value })
+  onGroupSizeSelect = value => this.setState({ groupSize: value });
 
   render = () => {
     const { groupSize } = this.state;
 
-    <MultiToggle
-      options={groupOptions}
-      selectedOption={groupSize}
-      onSelectOption={onFamilySizeSelect}
-      label="Select Group Size"
-    />
+    return (
+      <MultiToggle
+        options={groupOptions}
+        selectedOption={groupSize}
+        onSelectOption={onGroupSizeSelect}
+        label="Select Group Size"
+      />
+    );
   }
 
 
@@ -59,6 +61,27 @@ module.exports = Example;
 ```
 
 Include the component's [CSS](./style.css) through [style-loader](https://www.npmjs.com/package/style-loader) using `require("../style.css")` or by adding styles to your existing stylesheets.
+
+Props
+-----
+
+| Name | Type | Required | Description |
+|:---|:---|:---|:---|
+| options | `Array<Object>` | Yes | Ordered array of options to render. Explained further below. |
+| selectedOption | `Any` | Yes | Currently selected value. |
+| onSelectOption | `Function` | No | Callback when option is selected. Receives the selected option value as parameter |
+| label | `String` | No | Optional label to add above toggle. |
+| className | `string` | No | Optional style class to apply to toggle component. |
+
+### options format
+Toggle prop `options` is any array of objects with keys:
+
+| Key | Type | Required | Description |
+|:---|:---|:---|:---|
+| value | `Any` | Yes | Value passed by prop `onSelectOption`. |
+| displayName | `String` or `React Element` | No | Label rendered on toggle for each option. If omitted, value will be used. |
+| optionClass | `String` | No | Optional class to apply to toggle when option is selected. |
+
 
 ## License
 
