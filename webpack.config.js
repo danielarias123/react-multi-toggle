@@ -1,14 +1,30 @@
+// Webpack is used only to compile example
+
 module.exports = {
-     entry: './index.es6.js',
+     entry: './example/index',
      output: {
-         filename: 'index.js'
+         filename: 'bundle.js',
+         path: './example/',
      },
-     // Compile all es6 .js files except node_modules
      module: {
-         loaders: [{
+         loaders: [
+           // Compile all es6 .js files except node_modules passed through HMR first
+           {
              test: /\.jsx?$/,
              exclude: /node_modules/,
-             loader: 'babel-loader',
-         }]
-     }
+             loaders: ['react-hot', 'babel-loader'],
+           },
+           {
+            test: /\.css$/,
+            loader: "style-loader!css-loader"
+          }
+         ]
+     },
+     devServer: {
+      contentBase: './example',
+      host: 'localhost',
+      hot: true,
+      inline: true,
+      info: false
+    }
  }

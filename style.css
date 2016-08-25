@@ -7,6 +7,7 @@
 .toggle-wrapper label {
   padding: 0.3em;
   font-size: 17px;
+  display: block;
 }
 
 .toggleContainer {

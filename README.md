@@ -7,11 +7,21 @@ React-Multi-Toggle is a stylish toggle component that extends the functionality 
 Installation
 ------------
 
-Can be installed as an [npm package](https://www.npmjs.com/package/react-multi-toggle);
+Can be installed as an [npm package](https://www.npmjs.com/package/react-multi-toggle)
 
 ```
 npm install react-multi-toggle
 ```
+
+## Development
+Example can be found [here](https://github.com/danielarias123/react-multi-toggle/blob/master/example).
+
+
+```shell
+npm i
+npm start
+```
+Runs example on the webpack dev server on `http://localhost:8080/` with Hot Module Reloading enabled.
 
 Usage
 -----

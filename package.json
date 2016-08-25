@@ -1,16 +1,19 @@
 {
   "name": "react-multi-toggle",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Multi use toggle component for react",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server --hot --inline",
     "build": "babel index.es6.js -o index.js",
     "prepublish": "npm run build"
   },
   "keywords": [
     "react",
     "toggle",
-    "component"
+    "component",
+    "react-component",
+    "radio"
   ],
   "author": "Daniel Arias <danielarias_123@msn.com>",
   "homepage": "https://github.com/danielarias123/react-multi-toggle",
@@ -26,11 +29,14 @@
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.13.2",
     "babel-preset-react": "^6.11.1",
+    "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.23.1",
     "react": "^15.3.1",
     "react-dom": "^15.3.1",
+    "react-hot-loader": "^1.3.0",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.2"
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.15.0"
   },
   "dependencies": {
     "classnames": "^2.2.5"
