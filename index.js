@@ -22,14 +22,7 @@ var MultiToggle = function MultiToggle(_ref) {
   var label = _ref.label;
 
   // If required variables aren't passed, return empty
-  if (!options || !selectedOption) return _react2.default.createElement('span', null);
-
-  var selectOption = function selectOption(event) {
-    var value = parseInt(event.target.getAttribute('data-value'), 10);
-    // Function to parse values if needed
-    var returnValue = isNaN(value) ? event.target.getAttribute('data-value') : value;
-    onSelectOption(returnValue);
-  };
+  if (!options || selectedOption === null) return null;
 
   var numOptions = options.length;
 
@@ -51,6 +44,10 @@ var MultiToggle = function MultiToggle(_ref) {
       args[_key] = arguments[_key];
     }
 
+    var selectOption = function selectOption() {
+      return onSelectOption(args[0].value);
+    };
+
     var optionClass = (0, _classnames2.default)('toggleOption', { selected: isSelectedOption(args[0]) });
     var optionStyle = {
       width: columnWidth + '%'
@@ -59,7 +56,6 @@ var MultiToggle = function MultiToggle(_ref) {
       'div',
       {
         key: args[1],
-        'data-value': args[0].value,
         onClick: selectOption,
         className: optionClass,
         style: optionStyle
