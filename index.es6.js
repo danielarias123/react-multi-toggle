@@ -3,14 +3,7 @@ import classNames from 'classnames';
 
 const MultiToggle = ({ selectedOption, options, onSelectOption, className, label }) => {
   // If required variables aren't passed, return empty
-  if (!options || !selectedOption) return (<span />);
-
-  const selectOption = event => {
-    const value = parseInt(event.target.getAttribute('data-value'), 10);
-    // Function to parse values if needed
-    const returnValue = isNaN(value) ? event.target.getAttribute('data-value') : value;
-    onSelectOption(returnValue);
-  };
+  if (!options || selectedOption === null) return null;
 
   const numOptions = options.length;
 
@@ -24,6 +17,8 @@ const MultiToggle = ({ selectedOption, options, onSelectOption, className, label
   };
 
   const createToggleOption = (...args) => {
+    const selectOption = () => onSelectOption(args[0].value);
+
     const optionClass =
       classNames('toggleOption', { selected: isSelectedOption(args[0]) });
     const optionStyle = {
@@ -32,7 +27,6 @@ const MultiToggle = ({ selectedOption, options, onSelectOption, className, label
     return (
       <div
         key={args[1]}
-        data-value={args[0].value}
         onClick={selectOption}
         className={optionClass}
         style={optionStyle}
