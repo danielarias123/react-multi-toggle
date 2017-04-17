@@ -65,7 +65,7 @@ MultiToggle.propTypes = {
   options: PropTypes.array.isRequired,
   selectedOption: PropTypes.any.isRequired,
   onSelectOption: PropTypes.func,
-  label: PropTypes.string
+  label: PropTypes.any
 };
 
 export default MultiToggle;

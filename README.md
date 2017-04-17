@@ -82,7 +82,7 @@ Props
 | options | `Array<Object>` | Yes | Ordered array of options to render. Explained further below. |
 | selectedOption | `Any` | Yes | Currently selected value. |
 | onSelectOption | `Function` | No | Callback when option is selected. Receives the selected option value as parameter |
-| label | `String` | No | Optional label to add above toggle. |
+| label | `Any` | No | Optional label to add above toggle. |
 | className | `string` | No | Optional style class to apply to toggle component. |
 
 ### options format

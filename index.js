@@ -99,7 +99,7 @@ MultiToggle.propTypes = {
   options: _react.PropTypes.array.isRequired,
   selectedOption: _react.PropTypes.any.isRequired,
   onSelectOption: _react.PropTypes.func,
-  label: _react.PropTypes.string
+  label: _react.PropTypes.any
 };
 
 exports.default = MultiToggle;
