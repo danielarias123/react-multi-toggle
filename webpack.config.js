@@ -4,19 +4,19 @@ module.exports = {
      entry: './example/index',
      output: {
          filename: 'bundle.js',
-         path: './example/',
+         path: '/example/',
      },
      module: {
-         loaders: [
+         rules: [
            // Compile all es6 .js files except node_modules passed through HMR first
            {
              test: /\.jsx?$/,
              exclude: /node_modules/,
-             loaders: ['react-hot', 'babel-loader'],
+             use: ['react-hot-loader/webpack', 'babel-loader'],
            },
            {
             test: /\.css$/,
-            loader: "style-loader!css-loader"
+            use: ['style-loader', 'css-loader'],
           }
          ]
      },
@@ -25,6 +25,6 @@ module.exports = {
       host: 'localhost',
       hot: true,
       inline: true,
-      info: false
+      noInfo: true,
     }
  }

@@ -6,7 +6,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _react = require('react');
 
-var _react2 = _interopRequireDefault(_react);
+var React = _interopRequireWildcard(_react);
+
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _classnames = require('classnames');
 
@@ -14,12 +18,14 @@ var _classnames2 = _interopRequireDefault(_classnames);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 var MultiToggle = function MultiToggle(_ref) {
-  var selectedOption = _ref.selectedOption;
-  var options = _ref.options;
-  var onSelectOption = _ref.onSelectOption;
-  var className = _ref.className;
-  var label = _ref.label;
+  var selectedOption = _ref.selectedOption,
+      options = _ref.options,
+      onSelectOption = _ref.onSelectOption,
+      className = _ref.className,
+      label = _ref.label;
 
   // If required variables aren't passed, return empty
   if (!options || selectedOption === null) return null;
@@ -52,7 +58,7 @@ var MultiToggle = function MultiToggle(_ref) {
     var optionStyle = {
       width: columnWidth + '%'
     };
-    return _react2.default.createElement(
+    return React.createElement(
       'div',
       {
         key: args[1],
@@ -75,31 +81,31 @@ var MultiToggle = function MultiToggle(_ref) {
 
   var selectedToggleClass = (0, _classnames2.default)('toggle', options[getSelectedIndex()].optionClass);
 
-  var renderLabel = label ? _react2.default.createElement(
+  var renderLabel = label ? React.createElement(
     'label',
     null,
     label
   ) : null;
 
-  return _react2.default.createElement(
+  return React.createElement(
     'div',
     { className: 'toggle-wrapper' },
     renderLabel,
-    _react2.default.createElement(
+    React.createElement(
       'div',
       { className: toggleClass },
       options.map(createToggleOption),
-      _react2.default.createElement('div', { className: selectedToggleClass, style: toggleStyle })
+      React.createElement('div', { className: selectedToggleClass, style: toggleStyle })
     )
   );
 };
 
 MultiToggle.propTypes = {
-  className: _react.PropTypes.any,
-  options: _react.PropTypes.array.isRequired,
-  selectedOption: _react.PropTypes.any.isRequired,
-  onSelectOption: _react.PropTypes.func,
-  label: _react.PropTypes.any
+  className: _propTypes2.default.any,
+  options: _propTypes2.default.array.isRequired,
+  selectedOption: _propTypes2.default.any.isRequired,
+  onSelectOption: _propTypes2.default.func,
+  label: _propTypes2.default.any
 };
 
 exports.default = MultiToggle;
