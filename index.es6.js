@@ -13,7 +13,13 @@ const MultiToggle = ({ selectedOption, options, onSelectOption, className, label
   const isSelectedOption = option => option.value == selectedOption;
 
   const getSelectedIndex = () => {
-    const indexFound = options.findIndex((option) => isSelectedOption(option));
+    let indexFound = -1;
+    for (var i = 0; i < options.length; ++i) {
+      if (options[i].value === selectedOption) {
+          indexFound = i;
+          break;
+      }
+    }
     return indexFound > -1 ? indexFound : 0;
   };
 
