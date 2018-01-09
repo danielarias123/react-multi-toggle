@@ -1,19 +1,24 @@
-import React, { Component } from 'react';
-import { render } from 'react-dom';
+import React, { Component } from "react";
+import { render } from "react-dom";
 
-import MultiToggle from '../index.es6';
+import MultiToggle from "../index.es6";
 
-import '../style.css';
+import "../style.css";
 
 const groupOptions = [
   {
-    displayName: 'Couple',
+    displayName: "Single",
+    value: 1,
+    isDisabled: true
+  },
+  {
+    displayName: "Couple",
     value: 2
   },
   {
-    displayName: 'Family',
+    displayName: "Family",
     value: 4
-  },
+  }
 ];
 
 class Example extends Component {
@@ -38,11 +43,10 @@ class Example extends Component {
           onSelectOption={this.onGroupSizeSelect}
           label="Select Group Size"
         />
-      <strong>Selected group size:</strong> {groupSize}
+        <strong>Selected group size:</strong> {groupSize}
       </span>
     );
-  }
+  };
 }
 
-
-render(<Example />, document.getElementById('app'));
+render(<Example />, document.getElementById("app"));

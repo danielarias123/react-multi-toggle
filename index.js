@@ -1,18 +1,18 @@
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = require('react');
+var _react = require("react");
 
 var React = _interopRequireWildcard(_react);
 
-var _propTypes = require('prop-types');
+var _propTypes = require("prop-types");
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _classnames = require('classnames');
+var _classnames = require("classnames");
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -46,56 +46,62 @@ var MultiToggle = function MultiToggle(_ref) {
   };
 
   var createToggleOption = function createToggleOption() {
-    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-      args[_key] = arguments[_key];
-    }
+    var _ref2 = arguments.length <= 0 ? undefined : arguments[0],
+        value = _ref2.value,
+        displayName = _ref2.displayName,
+        isDisabled = _ref2.isDisabled;
 
     var selectOption = function selectOption() {
-      return onSelectOption(args[0].value);
+      return onSelectOption(value);
     };
 
-    var optionClass = (0, _classnames2.default)('toggleOption', { selected: isSelectedOption(args[0]) });
+    var optionClass = (0, _classnames2.default)("toggleOption", {
+      selected: isSelectedOption(arguments.length <= 0 ? undefined : arguments[0]),
+      optionDisabled: isDisabled
+    });
+
     var optionStyle = {
-      width: columnWidth + '%'
+      width: columnWidth + "%"
     };
+
     return React.createElement(
-      'div',
+      "div",
       {
-        key: args[1],
-        onClick: selectOption,
+        key: arguments.length <= 1 ? undefined : arguments[1],
+        onClick: isDisabled ? null : selectOption,
         className: optionClass,
         style: optionStyle
       },
-      args[0].displayName || args[0].value
+      displayName || value
     );
   };
 
-  var toggleClass = (0, _classnames2.default)('toggleContainer', className);
+  var toggleClass = (0, _classnames2.default)("toggleContainer", className);
   var toggleStyle = {
-    width: columnWidth + '%',
-    transform: 'translateX(' + 100 * getSelectedIndex() + '%)',
-    WebkitTransform: 'translateX(' + 100 * getSelectedIndex() + '%)',
-    MozTransform: 'translateX(' + 100 * getSelectedIndex() + '%)',
-    msTransform: 'translateX(' + 100 * getSelectedIndex() + '%)'
+    width: columnWidth + "%",
+    transform: "translateX(" + 100 * getSelectedIndex() + "%)",
+    WebkitTransform: "translateX(" + 100 * getSelectedIndex() + "%)",
+    MozTransform: "translateX(" + 100 * getSelectedIndex() + "%)",
+    msTransform: "translateX(" + 100 * getSelectedIndex() + "%)"
   };
 
-  var selectedToggleClass = (0, _classnames2.default)('toggle', options[getSelectedIndex()].optionClass);
+  var selectedToggleClass = (0, _classnames2.default)("toggle", options[getSelectedIndex()].optionClass);
 
   var renderLabel = label ? React.createElement(
-    'label',
+    "label",
     null,
     label
   ) : null;
 
   return React.createElement(
-    'div',
-    { className: 'toggle-wrapper' },
+    "div",
+    { className: "toggle-wrapper" },
     renderLabel,
     React.createElement(
-      'div',
+      "div",
       { className: toggleClass },
       options.map(createToggleOption),
-      React.createElement('div', { className: selectedToggleClass, style: toggleStyle })
+      React.createElement("div", { className: selectedToggleClass, style: toggleStyle })
     )
   );
 };
