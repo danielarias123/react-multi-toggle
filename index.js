@@ -49,14 +49,19 @@ var MultiToggle = function MultiToggle(_ref) {
     var _ref2 = arguments.length <= 0 ? undefined : arguments[0],
         value = _ref2.value,
         displayName = _ref2.displayName,
+        selectedDisplayName = _ref2.selectedDisplayName,
         isDisabled = _ref2.isDisabled;
+
+    var isSelected = isSelectedOption(arguments.length <= 0 ? undefined : arguments[0]);
+
+    var derivedDisplayName = !isSelected ? displayName : selectedDisplayName || displayName;
 
     var selectOption = function selectOption() {
       return onSelectOption(value);
     };
 
-    var optionClass = (0, _classnames2.default)("toggleOption", {
-      selected: isSelectedOption(arguments.length <= 0 ? undefined : arguments[0]),
+    var optionClass = (0, _classnames2.default)('toggleOption', {
+      selected: isSelected,
       optionDisabled: isDisabled
     });
 
@@ -72,7 +77,7 @@ var MultiToggle = function MultiToggle(_ref) {
         className: optionClass,
         style: optionStyle
       },
-      displayName || value
+      derivedDisplayName || value
     );
   };
 

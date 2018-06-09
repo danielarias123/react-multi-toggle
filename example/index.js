@@ -7,16 +7,18 @@ import "../style.css";
 
 const groupOptions = [
   {
-    displayName: "Single",
+    displayName: 'Undecided',
     value: 1,
     isDisabled: true
   },
   {
-    displayName: "Couple",
+    displayName: 'Deny',
+    selectedDisplayName: 'Denied',
     value: 2
   },
   {
-    displayName: "Family",
+    displayName: 'Accept',
+    selectedDisplayName: 'Accepted',
     value: 4
   }
 ];

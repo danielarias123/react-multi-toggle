@@ -34,11 +34,13 @@ import MultiToggle from `react-multi-toggle`;
 
 const groupOptions = [
   {
-    displayName: 'Couple',
+    displayName: 'Deny',
+    selectedDisplayName: 'Denied',
     value: 2
   },
   {
-    displayName: 'Family',
+    displayName: 'Accept',
+    selectedDisplayName: 'Accepted',
     value: 4
   },
 ];
@@ -89,12 +91,13 @@ Include the component's [CSS](./style.css) through [style-loader](https://www.np
 
 Toggle prop `options` is any array of objects with keys:
 
-| Key         | Type                        | Required | Description                                                               |
-| :---------- | :-------------------------- | :------- | :------------------------------------------------------------------------ |
-| value       | `Any`                       | Yes      | Value passed by prop `onSelectOption`.                                    |
-| displayName | `String` or `React Element` | No       | Label rendered on toggle for each option. If omitted, value will be used. |
-| optionClass | `String`                    | No       | Optional class to apply to toggle when option is selected.                |
-| isDisabled  | `Boolean`                   | No       | Viewable but not selectable.                                              |
+| Key                 | Type                        | Required | Description                                                                                      |
+| :------------------ | :-------------------------- | :------- | :----------------------------------------------------------------------------------------------- |
+| value               | `Any`                       | Yes      | Value passed by prop `onSelectOption`.                                                           |
+| displayName         | `String` or `React Element` | No       | Label rendered on toggle for each option. If omitted, value will be used.                        |
+| selectedDisplayName | `String` or `React Element` | No       | Label rendered on toggle for a selected option. If omitted, displayName then value will be used. |
+| optionClass         | `String`                    | No       | Optional class to apply to toggle when option is selected.                                       |
+| isDisabled          | `Boolean`                   | No       | Viewable but not selectable.                                                                     |
 
 ## License
 
