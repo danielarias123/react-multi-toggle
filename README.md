@@ -1,21 +1,24 @@
-# react-multi-toggle
+# react-multi-toggle-extra
 
 React-Multi-Toggle is a stylish & lightweight toggle component that extends the functionality of a checkbox or a radio button
 
-![alt text](https://github.com/danielarias123/react-multi-toggle/blob/master/example/images/react-multi-toggle-example.gif "Toggle Gif")
-![alt text](https://github.com/danielarias123/react-multi-toggle/blob/master/example/images/react-multi-toggle-example-2.gif "Toggle Gif 2")
+This project was forked from https://github.com/danielarias123/react-multi-toggle and extended. This project will stay in sync with its updates by monitoring it with [Backstroke](https://backstroke.co/).
+![Backstroke logo](https://backstroke.co/assets/img/logo.png){:height="40px"}
+
+![alt text](https://github.com/willhlaw/react-multi-toggle-extra/blob/master/example/images/react-multi-toggle-example.gif 'Toggle Gif')
+![alt text](https://github.com/willhlaw/react-multi-toggle-extra/blob/master/example/images/react-multi-toggle-example-2.gif 'Toggle Gif 2')
 
 ## Installation
 
-Can be installed as an [npm package](https://www.npmjs.com/package/react-multi-toggle)
+Can be installed as an [npm package](https://www.npmjs.com/package/react-multi-toggl-extra)
 
 ```
-npm install react-multi-toggle
+npm install react-multi-toggle-extra
 ```
 
 ## Development
 
-Example can be found [here](https://github.com/danielarias123/react-multi-toggle/blob/master/example).
+Example can be found [here](https://github.com/willhlaw/react-multi-toggle-extra/blob/master/example).
 
 ```shell
 npm i

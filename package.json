@@ -1,5 +1,5 @@
 {
-  "name": "react-multi-toggle",
+  "name": "react-multi-toggle-extra",
   "version": "1.1.0",
   "description": "Multi use toggle component for react",
   "main": "index.js",
@@ -16,11 +16,11 @@
     "react-component",
     "radio"
   ],
-  "author": "Daniel Arias <danielarias_123@msn.com>",
-  "homepage": "https://github.com/danielarias123/react-multi-toggle",
+  "author": "Will Lawrence <will.lawrence@gmail.com>",
+  "homepage": "https://github.com/willhlaw/react-multi-toggle-extra",
   "repository": {
     "type": "git",
-    "url": "git@github.com:danielarias123/react-multi-toggle.git"
+    "url": "git@github.com:willhlaw/react-multi-toggle-extra.git"
   },
   "license": "MIT",
   "devDependencies": {
