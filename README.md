@@ -1,21 +1,24 @@
-# react-multi-toggle
+# react-multi-toggle-extra
 
 React-Multi-Toggle is a stylish & lightweight toggle component that extends the functionality of a checkbox or a radio button
 
-![alt text](https://github.com/danielarias123/react-multi-toggle/blob/master/example/images/react-multi-toggle-example.gif "Toggle Gif")
-![alt text](https://github.com/danielarias123/react-multi-toggle/blob/master/example/images/react-multi-toggle-example-2.gif "Toggle Gif 2")
+This project was forked from https://github.com/danielarias123/react-multi-toggle and extended. This project will stay in sync with its updates by monitoring it with [Backstroke](https://backstroke.co/).
+![Backstroke logo](https://backstroke.co/assets/img/logo.png){:height="40px"}
+
+![alt text](https://github.com/willhlaw/react-multi-toggle-extra/blob/master/example/images/react-multi-toggle-example.gif 'Toggle Gif')
+![alt text](https://github.com/willhlaw/react-multi-toggle-extra/blob/master/example/images/react-multi-toggle-example-2.gif 'Toggle Gif 2')
 
 ## Installation
 
-Can be installed as an [npm package](https://www.npmjs.com/package/react-multi-toggle)
+Can be installed as an [npm package](https://www.npmjs.com/package/react-multi-toggl-extra)
 
 ```
-npm install react-multi-toggle
+npm install react-multi-toggle-extra
 ```
 
 ## Development
 
-Example can be found [here](https://github.com/danielarias123/react-multi-toggle/blob/master/example).
+Example can be found [here](https://github.com/willhlaw/react-multi-toggle-extra/blob/master/example).
 
 ```shell
 npm i
@@ -34,11 +37,13 @@ import MultiToggle from `react-multi-toggle`;
 
 const groupOptions = [
   {
-    displayName: 'Couple',
+    displayName: 'Deny',
+    selectedDisplayName: 'Denied',
     value: 2
   },
   {
-    displayName: 'Family',
+    displayName: 'Accept',
+    selectedDisplayName: 'Accepted',
     value: 4
   },
 ];
@@ -89,12 +94,13 @@ Include the component's [CSS](./style.css) through [style-loader](https://www.np
 
 Toggle prop `options` is any array of objects with keys:
 
-| Key         | Type                        | Required | Description                                                               |
-| :---------- | :-------------------------- | :------- | :------------------------------------------------------------------------ |
-| value       | `Any`                       | Yes      | Value passed by prop `onSelectOption`.                                    |
-| displayName | `String` or `React Element` | No       | Label rendered on toggle for each option. If omitted, value will be used. |
-| optionClass | `String`                    | No       | Optional class to apply to toggle when option is selected.                |
-| isDisabled  | `Boolean`                   | No       | Viewable but not selectable.                                              |
+| Key                 | Type                        | Required | Description                                                                                      |
+| :------------------ | :-------------------------- | :------- | :----------------------------------------------------------------------------------------------- |
+| value               | `Any`                       | Yes      | Value passed by prop `onSelectOption`.                                                           |
+| displayName         | `String` or `React Element` | No       | Label rendered on toggle for each option. If omitted, value will be used.                        |
+| selectedDisplayName | `String` or `React Element` | No       | Label rendered on toggle for a selected option. If omitted, displayName then value will be used. |
+| optionClass         | `String`                    | No       | Optional class to apply to toggle when option is selected.                                       |
+| isDisabled          | `Boolean`                   | No       | Viewable but not selectable.                                                                     |
 
 ## License
 

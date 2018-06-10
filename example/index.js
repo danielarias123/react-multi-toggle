@@ -1,22 +1,24 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
+import React, { Component } from 'react';
+import { render } from 'react-dom';
 
-import MultiToggle from "../index.es6";
+import MultiToggle from '../index.es6';
 
-import "../style.css";
+import '../style.css';
 
 const groupOptions = [
   {
-    displayName: "Single",
+    displayName: 'Undecided',
     value: 1,
     isDisabled: true
   },
   {
-    displayName: "Couple",
+    displayName: 'Deny',
+    selectedDisplayName: 'Denied',
     value: 2
   },
   {
-    displayName: "Family",
+    displayName: 'Accept',
+    selectedDisplayName: 'Accepted',
     value: 4
   }
 ];
@@ -49,4 +51,4 @@ class Example extends Component {
   };
 }
 
-render(<Example />, document.getElementById("app"));
+render(<Example />, document.getElementById('app'));

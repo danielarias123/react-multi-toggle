@@ -24,12 +24,18 @@ const MultiToggle = ({
   };
 
   const createToggleOption = (...args) => {
-    const { value, displayName, isDisabled } = args[0];
+    const { value, displayName, selectedDisplayName, isDisabled } = args[0];
+
+    const isSelected = isSelectedOption(args[0]);
+
+    const derivedDisplayName = !isSelected
+      ? displayName
+      : selectedDisplayName || displayName;
 
     const selectOption = () => onSelectOption(value);
 
-    const optionClass = classNames("toggleOption", {
-      selected: isSelectedOption(args[0]),
+    const optionClass = classNames('toggleOption', {
+      selected: isSelected,
       optionDisabled: isDisabled
     });
 
@@ -44,7 +50,7 @@ const MultiToggle = ({
         className={optionClass}
         style={optionStyle}
       >
-        {displayName || value}
+        {derivedDisplayName || value}
       </div>
     );
   };
