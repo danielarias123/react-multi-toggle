@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import { render } from "react-dom";
+import React, { Component } from 'react';
+import { render } from 'react-dom';
 
-import MultiToggle from "../index.es6";
+import MultiToggle from '../index.es6';
 
-import "../style.css";
+import '../style.css';
 
 const groupOptions = [
   {
@@ -51,4 +51,4 @@ class Example extends Component {
   };
 }
 
-render(<Example />, document.getElementById("app"));
+render(<Example />, document.getElementById('app'));
